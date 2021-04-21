@@ -26,6 +26,7 @@ time.sleep(2.0)
 
 # loop over the frames from the video stream
 while True:
+	print("loop")
 	# grab the frame from the video stream, resize it, and convert it
 	# to grayscale
 	frame = vs.read()
@@ -43,7 +44,7 @@ while True:
 		cv2.rectangle(frame, (x, y), (x + w, y + h), (0, 255, 0), 2)
 
 	# show the output frame
-	cv2.imshow("Frame", frame)
+#	cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
 	# if the `q` key was pressed, break from the loop

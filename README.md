@@ -1,2 +1,2 @@
-# embedded-CV
-# embedded-CV
+# Computer Vision for Embedded Devices
+

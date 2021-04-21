@@ -10,7 +10,7 @@ faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades+cascPath)
 video_capture = cv2.VideoCapture(0)
 
 while True:
-    print("Capture")
+    print(".")
     # Capture frame-by-frame
     ret, frame = video_capture.read()
 
@@ -30,7 +30,7 @@ while True:
     # Draw a rectangle around the faces
     for face in faces:
        # cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
-        print("Trovata")
+        print("Detected")
         video_capture.release()
         subprocess.run(["../volareCam.sh"])
         video_capture=cv2.VideoCapture(0)

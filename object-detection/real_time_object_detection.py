@@ -42,13 +42,14 @@ fps = FPS().start()
 
 # loop over the frames from the video stream
 while True:
-	# grab the frame from the threaded video stream and resize it
+	print("Loop")
+        # grab the frame from the threaded video stream and resize it
 	# to have a maximum width of 400 pixels
 	frame = vs.read()
-	frame = imutils.resize(frame, width=400)
+#	frame = imutils.resize(frame, width=400)
 
 	# grab the frame dimensions and convert it to a blob
-	(h, w) = frame.shape[:2]
+	#(h, w) = frame.shape[:2]
 	blob = cv2.dnn.blobFromImage(cv2.resize(frame, (300, 300)),
 		0.007843, (300, 300), 127.5)
 
@@ -85,7 +86,7 @@ while True:
 				cv2.FONT_HERSHEY_SIMPLEX, 0.5, COLORS[idx], 2)
 
 	# show the output frame
-	cv2.imshow("Frame", frame)
+	#cv2.imshow("Frame", frame)
 	key = cv2.waitKey(1) & 0xFF
 
 	# if the `q` key was pressed, break from the loop

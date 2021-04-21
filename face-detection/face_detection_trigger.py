@@ -1,4 +1,5 @@
-#import face_recognition
+#USAGE
+# python3 face_detection_trigger.py
 import subprocess
 import cv2
 import sys
@@ -31,7 +32,7 @@ while True:
        # cv2.rectangle(frame, (x, y), (x+w, y+h), (0, 255, 0), 2)
         print("Trovata")
         video_capture.release()
-        subprocess.run(["raspivid","-o","videoTest.h264","-t","10000"])
+        subprocess.run(["../volareCam.sh"])
         video_capture=cv2.VideoCapture(0)
         
     # Display the resulting frame
